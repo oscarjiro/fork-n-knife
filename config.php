@@ -15,12 +15,12 @@ define("DB_PASSWORD", "");
 // SMTP server
 define("SMTP_HOST", "smtp.gmail.com");
 define("SMTP_PORT", 587);
-define("SMTP_USER", "oscarjiroj@gmail.com");
-define("SMTP_PASSWORD", "skfvjpwjhkgvrdjj");
+define('SMTP_USER', getenv('SMTP_USER') ?: '');
+define('SMTP_PASSWORD', getenv('SMTP_PASSWORD') ?: '');
 
 // ReCAPTCHA
 define("RECAPTCHA_SITE_KEY", "6LeUHbsoAAAAABNc2yLiVLsWC7KeB1t1hz2xoWEA");
-define("RECAPTCHA_SECRET_KEY", "6LeUHbsoAAAAADFlCv3QLHQu8jps_4JcJoA-dcDY");
+define('RECAPTCHA_SECRET_KEY', getenv('RECAPTCHA_SECRET_KEY') ?: '');
 
 // User constraints
 define("USERNAME_MIN_LENGTH", 5);
